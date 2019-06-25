@@ -13,7 +13,6 @@ public class PlayerInput : MonoBehaviour
         Vertical
     }
 
-
     // Start is called before the first frame update
     void Awake()
     {

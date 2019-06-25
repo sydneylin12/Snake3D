@@ -7,13 +7,20 @@ using UnityEngine.SceneManagement;
 public class GameplayController : MonoBehaviour
 {
     public static GameplayController instance;
+    //helps with reloading scene
+    public Canvas c;
+    //objects to be spawned
     public GameObject fruit, bomb;
+    //score counter and play/pause/endgame text
     public Text scoreText, startEndText;
+    //button in corner to pause
     public Button pauseButton;
+    //is the game over? is it paused?
     private bool isOver, isPaused;
+    //keeps track of 1 player score NOT INHERETED
     private int score;
-    private float minX = -24f, maxX = 24f, minY = -14f, maxY = 14f;
-    private float zPos = -0.5f;
+    //map coordinates for spawning
+    private float minX = -24f, maxX = 24f, minY = -14f, maxY = 14f, zPos = -0.5f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,9 +38,21 @@ public class GameplayController : MonoBehaviour
 
     void Update()
     {
-        if(isOver == true && Input.GetKeyDown("space"))
+        if(isOver == true && Input.GetKeyDown("space") && c.tag == "PC")
         {
             SceneManager.LoadScene("Snake");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "PC_PVP")
+        {
+            SceneManager.LoadScene("SnakePVP");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "Mobile")
+        {
+            SceneManager.LoadScene("MobileSnake");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "Mobile_PVP")
+        {
+            SceneManager.LoadScene("MobileSnakePVP");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -46,7 +65,7 @@ public class GameplayController : MonoBehaviour
         }
     }
 
-    void MakeInstance()
+    public void MakeInstance()
     {
         if(instance == null)
         {
@@ -54,7 +73,7 @@ public class GameplayController : MonoBehaviour
         }
     }
 
-    void StartSpawning()
+    public void StartSpawning()
     {
         StartCoroutine(SpawnPickups());
     }
@@ -70,7 +89,7 @@ public class GameplayController : MonoBehaviour
         startEndText.text = "Game Over!\nPress [space] to Restart!";
     }
 
-    IEnumerator SpawnPickups()
+    public IEnumerator SpawnPickups()
     {
         //making fruit or bomb pickups
         yield return new WaitForSeconds(Random.Range(SnakeOptions.spawnRate, SnakeOptions.spawnRate + 0.5f));

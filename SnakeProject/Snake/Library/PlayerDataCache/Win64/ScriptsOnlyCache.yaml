@@ -7,15 +7,21 @@ ScriptsOnlyBuild:
     - MenuController
     - OptionsController
     - PlayerInput
+    - PvpGameplayController
+    - PvpInput
     - Rotator
     - SnakeController
+    - SnakePvpController
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.ugui.dll:
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
@@ -24,9 +30,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -50,29 +53,29 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10952}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11510}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12056}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12448}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 12462}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12658}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -105,27 +108,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10952}
     - Class: 114
-      Script: {instanceID: 11082}
+      Script: {instanceID: 11108}
     - Class: 114
-      Script: {instanceID: 11122}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12620}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12654}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 30022}
+      Script: {instanceID: 12692}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -174,28 +177,113 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10952}
     - Class: 114
-      Script: {instanceID: 11050}
+      Script: {instanceID: 11076}
     - Class: 114
-      Script: {instanceID: 11082}
+      Script: {instanceID: 11108}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11148}
     - Class: 114
-      Script: {instanceID: 11304}
+      Script: {instanceID: 11314}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11596}
+      Script: {instanceID: 11598}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 11626}
+    - Class: 114
+      Script: {instanceID: 11628}
+    - Class: 114
+      Script: {instanceID: 11862}
+    - Class: 114
+      Script: {instanceID: 12316}
+    - Class: 114
+      Script: {instanceID: 12658}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/SnakePVP.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 10952}
+    - Class: 114
+      Script: {instanceID: 11108}
+    - Class: 114
+      Script: {instanceID: 11148}
+    - Class: 114
+      Script: {instanceID: 11314}
+    - Class: 114
+      Script: {instanceID: 11320}
+    - Class: 114
+      Script: {instanceID: 11332}
+    - Class: 114
+      Script: {instanceID: 11366}
+    - Class: 114
+      Script: {instanceID: 11520}
+    - Class: 114
+      Script: {instanceID: 11626}
+    - Class: 114
+      Script: {instanceID: 11862}
+    - Class: 114
+      Script: {instanceID: 12316}
+    - Class: 114
+      Script: {instanceID: 12516}
+    - Class: 114
+      Script: {instanceID: 12658}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -209,7 +297,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
   - hash:
@@ -257,31 +345,31 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: fc108ce7d98c40ac0907e8ca7f500c76
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
   - hash:
       serializedVersion: 2
       Hash: 06a330481ec400be50745bb7faf76bd0
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Scrollbar
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
   - hash:
       serializedVersion: 2
       Hash: 89498a9a4a6296605faa18a2c5f758a4
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
   - hash:
@@ -299,13 +387,13 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
   - hash:
@@ -317,13 +405,13 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
   - hash:
@@ -341,9 +429,15 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 3d21d44afbbd2b54e1c8e2671ab811c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SnakePvpController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -353,7 +447,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
   - hash:
@@ -364,6 +458,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 88cf100ea3f77bcecdb69ffd435fd037
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PvpGameplayController
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -371,19 +471,19 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
   - hash:
@@ -407,7 +507,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
   - hash:
@@ -424,7 +524,7 @@ ScriptsOnlyBuild:
     className: Rotator
   - hash:
       serializedVersion: 2
-      Hash: f0e3ed3d29b35a8ceb35c8dd82626809
+      Hash: 88cf100ea3f77bcecdb69ffd435fd037
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameplayController
@@ -437,7 +537,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 97ace6213ad0f149b0917a4c669c6ca3
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
   - hash:
@@ -467,15 +567,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 516824a435828eadd660ef2f1658a48e
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
   - hash:
       serializedVersion: 2
       Hash: 92da9881aed190e8bb74661bcd74aa2c
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player2Input
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -485,13 +591,13 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
   - hash:
@@ -503,7 +609,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
   - hash:
@@ -527,7 +633,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: Physics2DRaycaster
   - hash:
@@ -556,8 +662,14 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
+      Hash: 070e0fe4baa4b8e239e0fc554af8ec28
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OptionsController
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
   - hash:
@@ -586,6 +698,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PvpInput
+  - hash:
+      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -605,19 +723,19 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
   - hash:
       serializedVersion: 2
       Hash: 3f52d34ea17dfc771004b80f5d492445
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventTrigger
   - hash:
@@ -635,19 +753,19 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 0852116b29df10ce3f9156850d406521
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Dropdown
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: 3ab7272a8b7d3ea5a142e0c9b6aae63b
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
   - hash:
@@ -659,13 +777,13 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 85c97bcc5f84eeb0999d75902803b99d
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
-    assemblyName: Unity.ugui.dll
+    assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
   - hash:
@@ -674,15 +792,11 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 070e0fe4baa4b8e239e0fc554af8ec28
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OptionsController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Snake.unity
   - Assets/Scenes/Options.unity
-  playerPath: C:/Users/slin/Desktop/SnakeProject/Snake/Builds/6-20-19 PC/Snake.exe
+  - Assets/Scenes/SnakePVP.unity
+  playerPath: C:/Users/Sid Lin/Documents/GitHub/SidSnake/SnakeProject/Snake/Builds/6-20-19
+    PC/Snake.exe

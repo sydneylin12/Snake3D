@@ -11,6 +11,11 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Snake");
     }
+    //Play PVP Mode
+    public void Play2P()
+    {
+        SceneManager.LoadScene("SnakePVP");
+    }
     //quit button
     public void QuitGame()
     {

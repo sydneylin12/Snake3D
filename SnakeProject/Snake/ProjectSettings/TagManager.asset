@@ -11,6 +11,9 @@ TagManager:
   - Tail
   - Player1
   - Player2
+  - Mobile
+  - PC
+  - PC_PVP
   layers:
   - Default
   - TransparentFX

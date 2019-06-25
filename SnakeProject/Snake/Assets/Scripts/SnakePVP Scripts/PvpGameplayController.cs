@@ -6,34 +6,55 @@ using UnityEngine.SceneManagement;
 
 public class PvpGameplayController : MonoBehaviour
 {
-    public static PvpGameplayController instance;
+    public static PvpGameplayController instancePvp;
+    //helps with reloading scene
+    public Canvas c;
+    //objects to be spawned
     public GameObject fruit, bomb;
+    //score counter and play/pause/endgame text
     public Text scoreText, startEndText;
+    //button in corner to pause
     public Button pauseButton;
+    //is the game over? is it paused?
     private bool isOver, isPaused;
-    private int score;
-    private float minX = -24f, maxX = 24f, minY = -14f, maxY = 14f;
-    private float zPos = -0.5f;
+    //keeps track of 1 player score NOT INHERETED
+    private int scoreP1, scoreP2;
+    //map coordinates for spawning
+    private float minX = -24f, maxX = 24f, minY = -14f, maxY = 14f, zPos = -0.5f;
     // Start is called before the first frame update
+
     void Awake()
     {
         MakeInstance();
         isOver = false;
         isPaused = false;
     }
-
     void Start()
     {
-        scoreText.text = "Score: 0";
+        scoreP1 = 0;
+        scoreP2 = 0;
+        scoreText.text = "Green: 0 | Purple: 0";
         startEndText.text = "";
-        //Invoke("StartSpawning", 0.5f);
+        Invoke("StartSpawning", 0.5f);
     }
 
     void Update()
     {
-        if (isOver == true && Input.GetKeyDown("space"))
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "PC")
         {
             SceneManager.LoadScene("Snake");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "PC_PVP")
+        {
+            SceneManager.LoadScene("SnakePVP");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "Mobile")
+        {
+            SceneManager.LoadScene("MobileSnake");
+        }
+        if (isOver == true && Input.GetKeyDown("space") && c.tag == "Mobile_PVP")
+        {
+            SceneManager.LoadScene("MobileSnakePVP");
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -46,15 +67,15 @@ public class PvpGameplayController : MonoBehaviour
         }
     }
 
-    void MakeInstance()
+    public void MakeInstance()
     {
-        if (instance == null)
+        if (instancePvp == null)
         {
-            instance = this;
+            instancePvp = this;
         }
     }
 
-    void StartSpawning()
+    public void StartSpawning()
     {
         StartCoroutine(SpawnPickups());
     }
@@ -64,13 +85,36 @@ public class PvpGameplayController : MonoBehaviour
         CancelInvoke("StartSpawning");
     }
 
-    public void GameOver()
+    public void GameOverPvp(string s)
     {
         isOver = true;
-        startEndText.text = "Game Over!\nPress [space] to Restart!";
+        if(s == "Player1")
+        {
+            startEndText.text = "Player 2 Wins!\nPress [space] to Restart!";
+        }
+        else if(s == "Player2")
+        {
+            startEndText.text = "Player 1 Wins!\nPress [space] to Restart!";
+        }
+        else if(s == "compareScores")
+        {
+            //win by comparing score
+            if(scoreP1 > scoreP2)
+            {
+                startEndText.text = "Player 1 Wins!\nPress [space] to Restart!";
+            }
+            else if(scoreP2 > scoreP1)
+            {
+                startEndText.text = "Player 2 Wins!\nPress [space] to Restart!";
+            }
+            else
+            {
+                startEndText.text = "Tie Game!\nPress [space] to Restart!";
+            }
+        }
     }
 
-    IEnumerator SpawnPickups()
+    public IEnumerator SpawnPickups()
     {
         //making fruit or bomb pickups
         yield return new WaitForSeconds(Random.Range(SnakeOptions.spawnRate, SnakeOptions.spawnRate + 0.5f));
@@ -86,10 +130,17 @@ public class PvpGameplayController : MonoBehaviour
         Invoke("StartSpawning", 0f);
     }
 
-    public void SetScore()
+    public void SetScorePvp(string s)
     {
-        score++;
-        scoreText.text = "Score: " + score.ToString();
+        if (s == "Player1")
+        {
+            scoreP1++;
+        }
+        else
+        {
+            scoreP2++;
+        } 
+        scoreText.text = "Green : " + scoreP1 + " | Purple: " + scoreP2;
     }
 
     public void PauseUnpauseGame()

@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d8d49ed7e89fda34aaf31e2a8ce3e2bd
   - enabled: 1
-    path: Assets/Scenes/Snake.unity
+    path: Assets/Scenes/PC/Snake.unity
     guid: d31d113d0d0df8b4da60f7d151ee6360
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: 91302cccf39d4fe45838ff562f30d709
+  - enabled: 1
+    path: Assets/Scenes/PC/SnakePVP.unity
+    guid: 1736b7663d4af3c409154c4aff3a089c
+  - enabled: 0
+    path: Assets/Scenes/Mobile/MobileSnake.unity
+    guid: f143272a0899d8440aa9e7489f88b149
   m_configObjects: {}

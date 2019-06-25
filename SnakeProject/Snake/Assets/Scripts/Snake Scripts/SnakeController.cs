@@ -178,13 +178,13 @@ public class SnakeController : MonoBehaviour
             print("Snake died."); //debugging
             AudioController.instance.playDeadSound();
             Time.timeScale = 0f;
-            PvpGameplayController.instance.GameOver();
+            GameplayController.instance.GameOver();
         }
 
         if(target.tag == Tags.FRUIT)
         {
             //deactivate pickup and make node at end of snake
-            PvpGameplayController.instance.SetScore();
+            GameplayController.instance.SetScore();
             AudioController.instance.playFruitSound();
             target.gameObject.SetActive(false);
             createNodeAtTail = true;
